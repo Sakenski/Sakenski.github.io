@@ -1,7 +1,75 @@
+header, nav, main, footer {
+	display: block;
+}
+
 body {
-    background-color: lightblue;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
 }
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	display: block;
+	padding: 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #444;
+}
+
 h1 {
-    color: navy;
-    margin-left: 20px;
-}
+  text-align: center;
+   }
+   
+   #food-list {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   }
+   .eda{
+    display:inline-block;
+   }
+   .food {
+  width: 30%;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+   }
+   
+   .food img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+   }
+   
+   .food h2 {
+  margin: 10px;
+  text-align: center;
+   }
+   
+   .food p {
+  margin: 10px;
+  text-align: center;
+   }
