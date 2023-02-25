@@ -15,18 +15,18 @@ const foods = [
       name: "Pizza",
       composition: "DoDo Pizza",
       image: "https://bloximages.newyork1.vip.townnews.com/wktv.com/content/tncms/assets/v3/editorial/0/69/06925512-5caf-11ed-8d21-37999604f15b/6365c63a85811.image.png?resize=250%2C250",
-      price: 20202,
+      price: 2000,
     },
     {
       name: "Steak",
       composition: "MeatShop",
       image: "https://www.saveur.com/uploads/2019/03/18/OXFWJ5GX5PV4YDBOG4BI6M2IRM.jpg?auto=webp",
-      price: 5600,
+      price: 6000,
     },
     {
       name: "Doner",
       composition: "Big Doner",
-      image: "https://xdfinn.github.io/doner-truck/images/cheese-shawarma.jpg",
+      image: "https://makisushi.kz/image/cache/data/1647207375_57-damion-club-p-doner-kebab-yeda-61-250x250.jpg",
       price: 1200,
     },
     {
@@ -39,6 +39,36 @@ const foods = [
      
      const foodList = document.getElementById("food-list");
      
+     function average(foods) {
+      let sum = 0;
+      for (let i = 0; i < foods.length; i++) {
+        sum += foods[i]['price'];
+        
+        
+      }
+      return sum / foods.length;
+     
+
+  }
+
+  function getObject(name, composition, price){
+    const object = {
+      name: name, composition: composition, price: price
+
+    }
+    return object
+  }
+  function createFastFood() { 
+    const food = [ 
+      getObject("name", "composition", 3500), 
+      
+    ]; 
+   
+    return food; 
+  } 
+  console.log(createFastFood());
+  
+
      for (let i = 0; i < foods.length; i++) {
     const foodDiv = document.createElement("div");
          foodDiv.classList.add("food");
@@ -63,3 +93,5 @@ const foods = [
     foodDiv.appendChild(foodprice);
     foodList.appendChild(foodDiv);
      }
+     document.write("<h4>Average Price: " + average(foods) + "</h4>");
+     
